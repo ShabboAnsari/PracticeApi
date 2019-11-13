@@ -3,14 +3,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PracticeApi.Models
 {
-    public class Products
+    public class Products : BaseModel
     {
-        [Key]
-        public int Id { get; set; }
         [Required]
         public string Name { get; set; }
+
         [Required]
         public short QuantityInPackage { get; set; }
+
         public UnitOfMeasurement Type { get; set; }
 
         [ForeignKey("Category")]

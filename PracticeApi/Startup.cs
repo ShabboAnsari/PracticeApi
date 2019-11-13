@@ -25,8 +25,25 @@ namespace PracticeApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc(opt => opt.EnableEndpointRouting = false);
+
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<ICategoryService, CategoryService>();
+
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IProductService, Productservice>();
+
+            services.AddScoped<IBlogsRepository, BlogsRepository>();
+            services.AddScoped<IBlogService, BlogService>();
+
+            services.AddScoped<IPageRepository, PageRepository>();
+            services.AddScoped<IPageService, Pageservice>();
+
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IUserService, UserService>();
+
+            services.AddScoped<IContactRepository, ContactRepository>();
+            services.AddScoped<IContactService, ContactService>();
+
             services.AddDbContext<SqlContext>(op => op.UseSqlServer(Configuration["ConnectionStrings:SqlConnection"]));
             services.AddControllers();
             services.AddAutoMapper(typeof(ModelToResourceProfile));

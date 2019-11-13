@@ -1,13 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace PracticeApi.Models
+namespace PracticeApi.ViewModels
 {
-    public class User : BaseModel
+    public class UserResource
     {
+        [Key]
+        public int Id { get; set; }
+
         public string Username { get; set; }
 
         public string Password { get; set; }
@@ -17,5 +17,9 @@ namespace PracticeApi.Models
         public string LastName { get; set; }
 
         public string Token { get; set; }
+
+        public bool IsActive { get; set; }
+
+        public DateTime CreatedAt { get; set; }
     }
 }

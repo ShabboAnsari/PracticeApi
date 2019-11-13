@@ -9,6 +9,11 @@ namespace PracticeApi.Mappings
         public ModelToResourceProfile()
         {
             CreateMap<Category, CategoryResource>();
+            CreateMap<Blogs, BlogResource>();
+            CreateMap<Contacts, ContactResorce>();
+            CreateMap<Pages, PageResorce>();
+            CreateMap<User, UserResource>();
+            CreateMap<Products, ProductResorce>();
         }
     }
 }

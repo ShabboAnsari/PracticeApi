@@ -3,10 +3,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace PracticeApi.Models
 {
-    public class Pages
+    public class Pages:BaseModel
     {
-        [Key]
-        public int Id { get; set; }
+        //[Key]
+        //public int Id { get; set; }
         public string Title { get; set; }
         public string Slug { get; set; }
         public string Text { get; set; }
